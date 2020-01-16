@@ -8,7 +8,7 @@
     <AudioPlayer src={'你的路径'}/>
 ```
 
-![image](./screenshot/1.png)
+![lvruHP.png](https://s2.ax1x.com/2020/01/16/lvruHP.png)
 
 #### 显示音频名称
 
@@ -18,7 +18,7 @@
     <AudioPlayer src={'你的路径'} title='泡沫'/>
 ```
 
-![image](./screenshot/2.png)
+![lvr39g.png](https://s2.ax1x.com/2020/01/16/lvr39g.png)
 
 #### 显示作者
 
@@ -28,7 +28,7 @@
 <AudioPlayer src={'你的路径'} title='泡沫' author='邓紫棋'/>
 ```
 
-![image](./screenshot/3.png)
+![lvr83Q.png](https://s2.ax1x.com/2020/01/16/lvr83Q.png)
 
 #### 自动播放
 
@@ -38,7 +38,7 @@
 <AudioPlayer src={'你的路径'} title='泡沫' author='邓紫棋' autoplay />
 ```
 
-![image](./screenshot/4.png)
+![lvrQN8.png](https://s2.ax1x.com/2020/01/16/lvrQN8.png)
 
 #### 进度条是否可拖拽
 
@@ -46,7 +46,7 @@
 ```jsx harmony
  <AudioPlayer src={'你的路径'} title='泡沫' author='邓紫棋' autoplay={true} draggable={false}/>
 ```
-![image](./screenshot/5.png)
+![lvrnBt.png](https://s2.ax1x.com/2020/01/16/lvrnBt.png)
 
 #### 设置海报
 通过`poster`设置
@@ -55,7 +55,7 @@
 <AudioPlayer src={'你的路径'} title='泡沫' author='邓紫棋' autoplay={false} draggable poster={'你的路径'}/>
 ```
 
-![image](./screenshot/6.png)
+![lxn3vj.png](https://s2.ax1x.com/2020/01/16/lxn3vj.png)
 
 ### Props
 
