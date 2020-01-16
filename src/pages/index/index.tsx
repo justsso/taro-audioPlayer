@@ -1,10 +1,10 @@
 import Taro, {Component, Config} from '@tarojs/taro'
-import {View} from '@tarojs/components'
+import {View, Text} from '@tarojs/components'
 import './index.scss'
 import AudioPlayer from "../../components/audioPlayer";
 
 import PaoMao from "./paomo.mp3";
-
+import DzqImg from "./dzq.jpg";
 
 class Index extends Component {
 
@@ -27,8 +27,16 @@ class Index extends Component {
 
   render() {
     return (
-      <View className='index'>
-        <AudioPlayer src={PaoMao} autoplay={false} author={'邓紫棋'} name={'泡沫'} controls dragable />
+      <View>
+
+        <View className='demo'><AudioPlayer src={PaoMao}/></View>
+        <View className='demo'><AudioPlayer src={PaoMao} title='泡沫'/></View>
+        <View className='demo'><AudioPlayer src={PaoMao} title='泡沫' author='邓紫棋'/></View>
+        <View className='demo'><AudioPlayer src={PaoMao} title='泡沫' author='邓紫棋' autoplay={false}/></View>
+        <View className='demo'><AudioPlayer src={PaoMao} title='泡沫' author='邓紫棋' autoplay={false} draggable={false}/></View>
+        <View className='demo'><AudioPlayer src={PaoMao} title='泡沫' author='邓紫棋' autoplay={false} draggable poster={DzqImg}/></View>
+
+
       </View>
     )
   }
