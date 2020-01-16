@@ -32,7 +32,7 @@ class Index extends Component {
         <View className='demo'><AudioPlayer src={PaoMao}/></View>
         <View className='demo'><AudioPlayer src={PaoMao} title='泡沫'/></View>
         <View className='demo'><AudioPlayer src={PaoMao} title='泡沫' author='邓紫棋'/></View>
-        <View className='demo'><AudioPlayer src={PaoMao} title='泡沫' author='邓紫棋' autoplay={false}/></View>
+        <View className='demo'><AudioPlayer src={PaoMao} title='泡沫' author='邓紫棋' autoplay/></View>
         <View className='demo'><AudioPlayer src={PaoMao} title='泡沫' author='邓紫棋' autoplay={false} draggable={false}/></View>
         <View className='demo'><AudioPlayer src={PaoMao} title='泡沫' author='邓紫棋' autoplay={false} draggable poster={DzqImg}/></View>
 
