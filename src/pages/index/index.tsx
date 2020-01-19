@@ -3,8 +3,8 @@ import {View, Text} from '@tarojs/components'
 import './index.scss'
 import AudioPlayer from "../../components/audioPlayer";
 
-import PaoMao from "./paomo.mp3";
-import DzqImg from "./dzq.jpg";
+const PaoMao = "http://cdn.hixiaoya.com/paomo.mp3";
+const DzqImg = "http://cdn.hixiaoya.com/dzq.jpg";
 
 class Index extends Component {
 
@@ -33,8 +33,10 @@ class Index extends Component {
         <View className='demo'><AudioPlayer src={PaoMao} title='泡沫'/></View>
         <View className='demo'><AudioPlayer src={PaoMao} title='泡沫' author='邓紫棋'/></View>
         <View className='demo'><AudioPlayer src={PaoMao} title='泡沫' author='邓紫棋' autoplay/></View>
-        <View className='demo'><AudioPlayer src={PaoMao} title='泡沫' author='邓紫棋' autoplay={false} draggable={false}/></View>
-        <View className='demo'><AudioPlayer src={PaoMao} title='泡沫' author='邓紫棋' autoplay={false} draggable poster={DzqImg}/></View>
+        <View className='demo'><AudioPlayer src={PaoMao} title='泡沫' author='邓紫棋' autoplay={false}
+                                            draggable={false}/></View>
+        <View className='demo'><AudioPlayer src={PaoMao} title='泡沫' author='邓紫棋' autoplay={false} draggable
+                                            poster={DzqImg}/></View>
 
 
       </View>

@@ -45,7 +45,8 @@ interface StateType {
 class AudioPlayer extends Component  <AudioPlayerProps> {
 
   static defaultProps = {
-    autoplay: false
+    autoplay: false,
+    draggable: true
   };
 
 
