@@ -1,5 +1,8 @@
 ## 代码演示
-
+#### 引入
+```typescript jsx
+    import AudioPlayer from 'taro-audio';
+```
 #### 基础用法
 
 通过`src`属性设置音频资源的地址

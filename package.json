@@ -1,6 +1,6 @@
 {
   "name": "taro-audio",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "private": false,
   "description": "基于taro的音频播放组件",
   "main": "./src/index.tsx",
