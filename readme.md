@@ -8,7 +8,7 @@
     <AudioPlayer src={'你的路径'}/>
 ```
 
-![lvruHP.png](https://s2.ax1x.com/2020/01/16/lvruHP.png)
+![lvruHP.png](http://cdn.hixiaoya.com/taro-audioPlayer/1.png)
 
 #### 显示音频名称
 
@@ -18,7 +18,7 @@
     <AudioPlayer src={'你的路径'} title='泡沫'/>
 ```
 
-![lvr39g.png](https://s2.ax1x.com/2020/01/16/lvr39g.png)
+![lvr39g.png](http://cdn.hixiaoya.com/taro-audioPlayer/2.png)
 
 #### 显示作者
 
@@ -28,7 +28,7 @@
 <AudioPlayer src={'你的路径'} title='泡沫' author='邓紫棋'/>
 ```
 
-![lvr83Q.png](https://s2.ax1x.com/2020/01/16/lvr83Q.png)
+![lvr83Q.png](http://cdn.hixiaoya.com/taro-audioPlayer/3.png)
 
 #### 自动播放
 
@@ -38,7 +38,7 @@
 <AudioPlayer src={'你的路径'} title='泡沫' author='邓紫棋' autoplay />
 ```
 
-![lvrQN8.png](https://s2.ax1x.com/2020/01/16/lvrQN8.png)
+![lvrQN8.png](http://cdn.hixiaoya.com/taro-audioPlayer/4.png)
 
 #### 进度条是否可拖拽
 
@@ -46,7 +46,7 @@
 ```jsx harmony
  <AudioPlayer src={'你的路径'} title='泡沫' author='邓紫棋' autoplay={true} draggable={false}/>
 ```
-![lvrnBt.png](https://s2.ax1x.com/2020/01/16/lvrnBt.png)
+![lvrnBt.png](http://cdn.hixiaoya.com/taro-audioPlayer/5.png)
 
 #### 设置海报
 通过`poster`设置
@@ -55,7 +55,7 @@
 <AudioPlayer src={'你的路径'} title='泡沫' author='邓紫棋' autoplay={false} draggable poster={'你的路径'}/>
 ```
 
-![lxn3vj.png](https://s2.ax1x.com/2020/01/16/lxn3vj.png)
+![lxn3vj.png](http://cdn.hixiaoya.com/taro-audioPlayer/6.png)
 
 ### Props
 
