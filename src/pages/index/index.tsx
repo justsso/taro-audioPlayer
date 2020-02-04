@@ -29,10 +29,25 @@ class Index extends Component {
     return (
       <View>
 
-        <View className='demo'><AudioPlayer src={PaoMao}/></View>
+        <View className='demo'>
+          <AudioPlayer
+            src={PaoMao}
+            onPlay={() => {
+              console.log('onPlay')
+            }}
+            onPause={() => {
+              console.log('onPuase...')
+            }}
+            onTimeUpdate={() => {
+              console.log('onTimeUpdate')
+            }}
+            onError={(res)=>{
+              console.log(res)
+            }}
+          /></View>
         <View className='demo'><AudioPlayer src={PaoMao} title='泡沫'/></View>
         <View className='demo'><AudioPlayer src={PaoMao} title='泡沫' author='邓紫棋'/></View>
-        <View className='demo'><AudioPlayer src={PaoMao} title='泡沫' author='邓紫棋' autoplay/></View>
+        {/*<View className='demo'><AudioPlayer src={PaoMao} title='泡沫' author='邓紫棋' autoplay/></View>*/}
         <View className='demo'><AudioPlayer src={PaoMao} title='泡沫' author='邓紫棋' autoplay={false}
                                             draggable={false}/></View>
         <View className='demo'><AudioPlayer src={PaoMao} title='泡沫' author='邓紫棋' autoplay={false} draggable

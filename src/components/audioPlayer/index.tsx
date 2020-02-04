@@ -14,7 +14,12 @@ interface AudioPlayerProps {
   author?: string,
   draggable?: boolean,
   autoplay?: boolean,
-  poster?: string
+  poster?: string,
+  onPlay?: () => void,
+  onPause?: () => void,
+  onEnded?: () => void,
+  onError?: () => void,
+  onTimeUpdate?: () => void
 }
 
 interface AudioContext {
@@ -29,6 +34,7 @@ interface AudioContext {
   readonly seek: void,
   readonly play: void,
   readonly onPlay: void,
+  readonly onPause: void,
   readonly onError: void,
   readonly paused
 }
@@ -67,8 +73,6 @@ class AudioPlayer extends Component  <AudioPlayerProps> {
     showTime1: '00:00',
     showTime2: '00:00'
   };
-
-
 
 
   componentDidMount() {
@@ -117,24 +121,32 @@ class AudioPlayer extends Component  <AudioPlayerProps> {
       min = getMinute(currentTime);
       sec = getSecond(currentTime);
       this.setState({showTime1: `${min}:${sec}`, currentTime: currentTime});
-
+      this.props.onTimeUpdate && this.props.onTimeUpdate();
     });
+
     this.innerAudioContext.onPlay(() => {
-      console.log('开始播放');
       duration = this.innerAudioContext.duration; //单位秒
       min = getMinute(duration);
       sec = getSecond(duration);
       this.setState({duration: duration, showTime2: `${min}:${sec}`});
+      this.props.onPlay && this.props.onPlay();
     });
+
+    this.innerAudioContext.onPause(() => {
+      this.props.onPause && this.props.onPause();
+    });
+
     this.innerAudioContext.onError((res) => {
       console.log(res.errMsg);
       console.log(res.errCode);
-      Taro.showModal({title: '出错了', content: res.errMsg})
+      Taro.showModal({title: '出错了', content: res.errMsg});
+      this.props.onError && this.props.onError(res);
     });
     this.innerAudioContext.onEnded(() => {
       this.setState({
         iconSrc: playSrc
       })
+      this.props.onEnded && this.props.onEnded()
     })
 
   }
