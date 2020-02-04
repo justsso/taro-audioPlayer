@@ -38,11 +38,14 @@ class Index extends Component {
             onPause={() => {
               console.log('onPuase...')
             }}
-            onTimeUpdate={() => {
-              console.log('onTimeUpdate')
+            onTimeUpdate={({currentTime, duration}) => {
+              console.log('onTimeUpdate', currentTime, duration)
             }}
             onError={(res)=>{
               console.log(res)
+            }}
+            onEnded={()=>{
+              console.log('onEnded')
             }}
           /></View>
         <View className='demo'><AudioPlayer src={PaoMao} title='泡沫'/></View>

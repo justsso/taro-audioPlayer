@@ -118,10 +118,11 @@ class AudioPlayer extends Component  <AudioPlayerProps> {
     });
     this.innerAudioContext.onTimeUpdate(() => {
       const currentTime = this.innerAudioContext.currentTime;
+      const duration = this.innerAudioContext.duration;
       min = getMinute(currentTime);
       sec = getSecond(currentTime);
       this.setState({showTime1: `${min}:${sec}`, currentTime: currentTime});
-      this.props.onTimeUpdate && this.props.onTimeUpdate();
+      this.props.onTimeUpdate && this.props.onTimeUpdate({currentTime: currentTime, duration: duration});
     });
 
     this.innerAudioContext.onPlay(() => {
@@ -142,6 +143,7 @@ class AudioPlayer extends Component  <AudioPlayerProps> {
       Taro.showModal({title: '出错了', content: res.errMsg});
       this.props.onError && this.props.onError(res);
     });
+
     this.innerAudioContext.onEnded(() => {
       this.setState({
         iconSrc: playSrc

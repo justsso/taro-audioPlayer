@@ -70,3 +70,8 @@
 | author | 音频作者 | `string` | 无 | 否 |
 | autoplay | 是否自动播放 | `boolean` | `false`| 否 |
 | poster | 音频海报 | `string` | 无 | 否 |
+| onPlay | 当开始/继续播放时触发play事件 | `eventHandle` | 无 | 否 
+| onPause | 当暂停播放时触发 pause 事件 | `eventHandle` | 无 | 否
+| onEnded | 当播放到末尾时触发 ended 事件 | `eventHandle` | 无 | 否
+| onTimeUpdate | 当播放进度改变时触发 timeupdate 事件，detail = {currentTime, duration} | `eventHandle` | 无 | 否
+| onError | 当发生错误时触发 error 事件，detail = {errMsg:MediaError.code} | `eventHandle` | 无 | 否
