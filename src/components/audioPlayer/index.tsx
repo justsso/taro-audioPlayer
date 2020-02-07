@@ -31,6 +31,7 @@ interface AudioContext {
   readonly duration: number,
   readonly onTimeUpdate: void,
   readonly onEnded: void,
+  readonly onStop: void,
   readonly seek: void,
   readonly play: void,
   readonly onPlay: void,
@@ -134,6 +135,10 @@ class AudioPlayer extends Component  <AudioPlayerProps> {
     });
 
     this.innerAudioContext.onPause(() => {
+      //有时，手机息屏之后会暂停播放音频  修改图标啊
+      this.setState({
+        iconSrc: playSrc
+      });
       this.props.onPause && this.props.onPause();
     });
 
@@ -149,6 +154,13 @@ class AudioPlayer extends Component  <AudioPlayerProps> {
         iconSrc: playSrc
       })
       this.props.onEnded && this.props.onEnded()
+    })
+
+    this.innerAudioContext.onStop(() => {
+      //修改图标啊
+      this.setState({
+        iconSrc: playSrc
+      });
     })
 
   }
